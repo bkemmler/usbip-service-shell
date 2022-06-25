@@ -19,6 +19,8 @@ Installed on both machines:
  * usbip-utils 2.0
  * [Passwordless](https://www.redhat.com/sysadmin/passwordless-ssh) SSH Login for the other root.
 
+apt install usbip
+
 ## Instructions
  - copy files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/host) to your Host Computer and files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/client) to your Client Computer as file structures dictate.
  - on both machines change IP-addresses of your host / client in client/host's **/root/.ssh/config** files and run **sudo systemctl enable usbipd && sudo systemctl start usbipd**
