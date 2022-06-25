@@ -11,7 +11,7 @@ touch $SPOOL
 
 while [[ -e $SPOOL ]]
 do
-    /usr/sbin/usbip attach -r pi -b 1-1.3 # Modify USB port
+    /usr/sbin/usbip attach -r 192.168.1.1 -b 1-1.3 # Modify USB port and ip
     sleep 10
 done
 
