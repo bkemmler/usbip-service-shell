@@ -2,16 +2,11 @@
 
 **usbip-service-shell** is a set of Linux services for the **USB/IP Project** that allows you to take no actions needed for handling sudden reboots and/or plug/unplug USB devices on fly
 
-## Download
-You can download the last release [here](https://github.com/alpertsev/usbip-service-shell/releases/tag/v0.1.1)
 
 ## Requirements, Conventions, Hardware or Software Version Used ##
 
-**Tested on:**
-
-Host - a Raspberry Pi 3B+ single board computer with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1036-raspi armv7l)
-
-Client - a GIGABYTE™ C246WU4 i3-8100 workstation with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-77-genetic x86_64)
+Host - a Raspberry Pi 3B+ single board computer with  Rasbery OS
+Client - ...
 
 Installed on both machines:
  * OpenSSH_8.2p1
@@ -19,7 +14,7 @@ Installed on both machines:
  * usbip-utils 2.0
  * [Passwordless](https://www.redhat.com/sysadmin/passwordless-ssh) SSH Login for the other root.
 
-apt install usbip
+ * apt install usbip
 
 ## Instructions
  - copy files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/host) to your Host Computer and files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/client) to your Client Computer as file structures dictate.
