@@ -13,13 +13,13 @@ RemainAfterExit=yes
 EnvironmentFile=/tmp/usbip.tmp
 
 # binding a device itself
-ExecStart=/bin/sh -c "/usr/lib/linux-tools/$(uname -r)/usbip bind -b %i"
+ExecStart=/bin/sh -c "/usr/sbin/usbip bind -b %i"
 # and attching the device on remote computer
 ExecStartPost=ssh THERE "/bin/systemctl start usbip@${HERE}:%i"
 
 # expecting errors of unbinding actually "already disconnected device"
 ExecStop=ssh THERE "/bin/systemctl stop usbip@${HERE}:%i"
-ExecStop=-/bin/sh -c "/usr/lib/linux-tools/$(uname -r)/usbip unbind -b %i"
+ExecStop=-/bin/sh -c "/usr/sbin/usbip unbind -b %i"
 ExecStop=/bin/systemctl reset-failed
 
 [Install]
